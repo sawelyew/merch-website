@@ -40,6 +40,9 @@ def register(request):
             form.save()
             messages.success(request, 'Registration successful')
             return redirect('users:login')
+        else:
+            print("Non valid")
+            messages.error(request, 'Registration failed')
     else:
         form = UserRegistrationForm()
     context = {
@@ -53,10 +56,9 @@ def login(request):
     if request.method == 'POST':
         form = UserLoginForm(data=request.POST)
         if form.is_valid():
-            email = form.cleaned_data['email']
+            username = form.cleaned_data['username']
             password = form.cleaned_data['password']
-            user = auth.authenticate(request, email=email, password=password)
-
+            user = auth.authenticate(request, username=username, password=password)
             if user:
                 auth.login(request, user)
                 return redirect('index')

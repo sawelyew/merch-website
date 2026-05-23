@@ -1,6 +1,6 @@
 app_name = 'products'
 
-from django.urls import path
+from django.urls import path, include
 from products.views import products, product_detail
 
 urlpatterns = [

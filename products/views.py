@@ -2,7 +2,6 @@ from django.core.paginator import Paginator
 from django.shortcuts import render
 from .models import Product, ProductCategory
 
-# Create your views here.
 def index(request):
     context = {'title': 'Home Page'}
     return render(request, 'products/index.html', context)

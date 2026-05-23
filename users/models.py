@@ -10,7 +10,6 @@ def get_dictionary_path(instance, filename):
 class User(AbstractUser):
     image = models.ImageField(upload_to=get_dictionary_path, null=True, blank=True)
 
-
 class BasketQuerySet(models.QuerySet):
     def total_price(self):
         price = sum(basket.sum() for basket in self)
