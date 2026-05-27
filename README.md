@@ -17,8 +17,8 @@
 
 1. **Клонировать репозиторий:**
    ```bash
-   git clone [https://github.com/твой_юзернейм/название_репозитория.git](https://github.com/твой_юзернейм/название_репозитория.git)
-   cd название_репозитория
+   git clone https://github.com/sawelyew/merch-website
+   cd merch-website
    ```
 2. **Запустить проект через Docker Compose:**
    ```bash
